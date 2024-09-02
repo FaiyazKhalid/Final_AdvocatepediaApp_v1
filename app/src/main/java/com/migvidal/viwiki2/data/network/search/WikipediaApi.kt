@@ -16,7 +16,7 @@ import retrofit2.http.Query
 /**
  * Base URL for the Wikipedia API
  */
-private const val WikipediaBaseUrl: String = "https://en.wikipedia.org/"
+private const val WikipediaBaseUrl: String = "https://advocatepedia.com/"
 
 /**
  * Adds basic parameters
@@ -24,7 +24,7 @@ private const val WikipediaBaseUrl: String = "https://en.wikipedia.org/"
 private val paramsInterceptor = Interceptor { chain ->
     var request = chain.request()
     val newUrl = request.url.newBuilder()
-        .addPathSegments("w/api.php")
+        .addPathSegments("api.php")
         .addQueryParameter("action", "query")
         .addQueryParameter("format", "json")
         .build()
@@ -59,7 +59,7 @@ interface WikipediaApiService {
      * Fetches the search results for a query
      * @param query Search query
      */
-    @GET("/w/api.php")
+    @GET("api.php")
     suspend fun getSearchResults(
         @Query("list") list: String = "search",
         @Query("srlimit") resultsLimit: Int = 20,
@@ -69,7 +69,7 @@ interface WikipediaApiService {
     /**
      * Fetches data from an article by its ID
      */
-    @GET("/w/api.php")
+    @GET("api.php")
     suspend fun getArticleById(
         @Query("pageids") pageId: Int,
         @Query("prop") prop: String = "extracts|pageimages",
