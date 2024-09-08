@@ -1,4 +1,4 @@
-package com.migvidal.viwiki2.data.network.day
+package com.advocatepedia.lite.data.network.day
 
 import kotlinx.coroutines.runBlocking
 import org.junit.Test

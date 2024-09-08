@@ -1,11 +1,11 @@
-package com.migvidal.viwiki2.data.database
+package com.advocatepedia.lite.data.database
 
 import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.migvidal.viwiki2.data.database.entities.DatabaseDayImage
-import com.migvidal.viwiki2.data.database.entities.DatabaseImage
+import com.advocatepedia.lite.data.database.entities.DatabaseDayImage
+import com.advocatepedia.lite.data.database.entities.DatabaseImage
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.junit.After

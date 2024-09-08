@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.migvidal.viwiki2"
+    namespace = "com.advocatepedia.lite"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.migvidal.viwiki2"
+        applicationId = "com.advocatepedia.lite"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -30,6 +30,7 @@ android {
                 "proguard-rules.pro"
             )
             isDebuggable = false
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
@@ -63,7 +64,9 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("io.coil-kt:coil-compose:2.5.0")
     implementation("androidx.compose.material:material-icons-extended:1.5.4")
-    implementation("androidx.compose.material3:material3:1.1.2")
+
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.compose.material3:material3-android:1.3.0")
     // testing
     testImplementation("junit:junit:4.13.2")
     testImplementation("androidx.test.ext:junit:1.1.5")
@@ -88,6 +91,7 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10")
     implementation("com.squareup.moshi:moshi-kotlin:1.15.0")
     implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+
     // /Network
 
     testImplementation("junit:junit:4.13.2")
@@ -103,4 +107,9 @@ buildscript {
     dependencies {
         classpath( "com.twitter.compose.rules:ktlint:0.0.26")
     }
+}
+dependencies {
+
+    implementation( "androidx.compose.material3:material3-android:1.3.0")
+
 }

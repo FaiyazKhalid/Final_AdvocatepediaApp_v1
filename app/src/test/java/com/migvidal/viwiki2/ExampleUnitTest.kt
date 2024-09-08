@@ -1,4 +1,4 @@
-package com.migvidal.viwiki2
+package com.advocatepedia.lite
 
 import org.junit.Test
 

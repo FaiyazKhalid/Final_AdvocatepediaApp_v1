@@ -1,11 +1,11 @@
-package com.migvidal.viwiki2.data.database
+package com.advocatepedia.lite.data.database
 
 import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.migvidal.viwiki2.data.database.entities.DatabaseArticle
-import com.migvidal.viwiki2.data.database.entities.DatabaseImage
+import com.advocatepedia.lite.data.database.entities.DatabaseArticle
+import com.advocatepedia.lite.data.database.entities.DatabaseImage
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Before
@@ -58,6 +58,10 @@ class ArticleReadWriteTest {
             isFeatured = false,
             isMostRead = false,
             onThisDayYear = 2000,
+            news = "news",
+            nid = "nid",
+            wish = "wish",
+            num = "num",
         )
         runBlocking {
             imageDao.insert(fakeDbThumbnail)
