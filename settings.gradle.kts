@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ViWiki2"
+rootProject.name = "lite"
 include(":app")
  
