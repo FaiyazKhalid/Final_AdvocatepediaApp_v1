@@ -13,7 +13,7 @@ android {
         applicationId = "com.advocatepedia.lite"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
+        versionCode = 3
         versionName = "0.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
